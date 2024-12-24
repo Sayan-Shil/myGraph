@@ -1,0 +1,36 @@
+//Basics We need
+int[] parent = {........}
+int[] rank= new int[element.size];
+Arrays.fill(rank,0);
+
+// Finding Parent with Path Compression
+public int findParent ( x , parent[] ){
+
+    if (parent[x]==x) {
+     return x ; ( Direct Return)
+  }
+    else {
+     return parent[x] = findParent(parent[x],parent[]);
+  }
+}
+
+
+//Union with Ranking
+
+public void union(x,y){
+  x=findParent(x,parent[]);
+  y=findParent(y,parent[]);
+  if(x==y){
+  return;
+  }
+  else if (rank[x]==rank[y] {
+     parent[x]=y;  --> y given power
+     rank[y]++;
+  }
+  else if (rank[x]>rank[y]){
+     parent[y]==x;
+  }
+  else{
+      parent[x]==y;;
+  }
+}

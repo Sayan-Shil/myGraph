@@ -1,0 +1,37 @@
+General process may lead to increase height of graph while making the entire parent graph a linked list...
+So, traversal of parent may be difficult..
+Example
+0-->2-->3-->4-->5
+
+In this case, if you say " Hello 5, who is your parent?"
+5(Responsibility is 4)-->4(Responsibility is 3)--> 3(Responsibility is 2)--> 2(Responsibility is 0)---> 0(Yes, my responsibility)
+0--> 2(Oh,Parent is 0)-->3(Parent is 0)-->4(Parent is 0)-->5 ,"Parent is 0 :)"
+
+So, Total n+n call...
+Worst time complexity
+
+
+Problem-
+1) Traversal Problem
+2) Union Problem (Linear Problem)
+
+
+Solution:
+1) Traversal Problem                ->  Path Compression
+2) Union Problem (Linear Problem)   ->  Ranking System
+
+Path Compression:
+
+Instead of two list:
+Make a single list where index represents elements & their corresponding value their parent
+to make direct search in O(1)
+
+
+Ranking List:
+Create a new list of rank list , initialise with 0
+
+if some union and attach with other parent-> increase that rank
+
+Condition 1 : Both Parents are same, nothing to do
+Condition 2 : Both Parents are not same but rank==0, connect anyone but increase its rank
+Condition 3: Both parents are not same but one has higher rank, assign lower rank set to higher set parent

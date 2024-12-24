@@ -1,0 +1,10 @@
+Floyd Warshall Rule is applicable to find a 2-D matrices to find minimum distance from each vertices to another vertices.
+Its complexity is v*E * V = VVE almost n3
+
+For every vertices the following will happen
+
+                             Via A         Via B        Via C  -----------
+
+    (a,b)                 a-->A-->b       a-->B-->b   a-->C-->b
+
+                    min((a,b),(a-->A-->b)

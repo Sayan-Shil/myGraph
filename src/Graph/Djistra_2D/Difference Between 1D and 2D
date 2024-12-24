@@ -1,0 +1,33 @@
+1-D : QUEUE
+
+We take Queue <int[]> where we push
+1 Integer as destination node ,
+1 Integer as destination distance
+So,
+int,int better go with int[][]
+
+
+2-D : QUEUE
+
+We take Queue <List<int[],int>> ot int[][] where we push
+1 int[] as destination co-ordinate ,
+  Each int[]
+   x coordinate
+   y coordinate
+1 Integer as destination distance
+---------------------------------------------------------------------------------------------------------
+
+1-D : Distance:
+
+Here as it's 1D, so there is only 1 distance possible to move forward or backward .
+
+
+
+2-D : Distance:
+
+Here as it's 2-D , we can go to 4 or 8 distance possible ... we have to iterate on each distance
+a direction array is needed to change X,Y co-ordinate
+
+Every time, to get the distance , we need to compute distance by subtracting two coordinate value
+And then use max to jump on that new value
+

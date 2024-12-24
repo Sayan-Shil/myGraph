@@ -1,0 +1,53 @@
+Disjoint Union Set is very common in Graph Algorithm.
+The Main Principle of the disjoint union set is
+
+1. Find Parent
+2. Union
+
+WHAT IS HAPPENING?
+>>
+    In disjoint union set, leader or parents are united togethers to try to make a single parent/leader
+    Union denotes parent joining
+    Example
+
+    Elements : 0  1  2  3  4  5
+       Leader: 0  1  2  3  4  5
+
+       To Union(0,1), first we need to union 0,1 parents
+       0's parent 1 , 1's parent is 1
+       Join 0--> 1  ( Forming Directed Graph)
+
+       Update two list
+           Elements : 0  1  2  3  4  5
+              Leader: 0  0  2  3  4  5
+
+       Union(1,5)
+       =  1's parent is 0, 5's parent is 5 , So join 0-->
+       0-->1
+       ----5
+
+       Update two list
+           Elements : 0  1  2  3  4  5
+              Leader: 0  0  2  3  4  0
+
+       Union(2,3)
+       = 2,s parent is 2, as 3s parent is 3
+         join 2-->3
+
+     Update two list
+          Elements : 0  1  2  3  4  5
+             Leader: 0  0  2  2  4  0
+
+       Union(3,5)
+       = 3s parent is 2, 5s parent is 0
+       so, join 2-->0
+
+       2--->3
+       -------->0---->1
+                 ----->5
+
+
+
+
+
+
